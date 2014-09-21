@@ -94,4 +94,30 @@ describe('Mixins', function () {
 
   });
 
+  describe('combine()', function () {
+
+    it('should return a an object merging attributes from all specified object', function () {
+      var a = { foo: 10 },
+          b = { bar: 20 },
+          c = { moo: 30, foo: 40 };
+
+      expect(mixins.combine(a, b, c)).to.be.eql({
+        foo: 40,
+        bar: 20,
+        moo: 30
+      });
+    });
+
+    it('should return a copy of the source object when it is the only specified argument', function () {
+      var a = { foo: 10 };
+
+      expect(mixins.combine(a)).to.be.eql({ foo: 10 });
+    });
+
+    it('should return an empty object if no arguments are specified', function () {
+      expect(mixins.combine()).to.be.eql({});
+    });
+
+  });
+
 });
