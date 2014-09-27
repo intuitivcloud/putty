@@ -1,5 +1,5 @@
-# ic-utils #
+# putty #
 
-![build-status](https://magnum-ci.com/status/abb4eee179eddf4f5dceadf555c185f8.png)
+[![Build Status](https://travis-ci.org/intuitivcloud/putty.svg?branch=master)](https://travis-ci.org/intuitivcloud/putty)
 
 Common utilities and helpers
